@@ -1,3 +1,3 @@
 [submodule "frontend"]
     path = frontend/frontend-bank
-    url = git://github.com/Marcolino2003/Frontend.git
+    url = https://github.com/Marcolino2003/Frontend.git
