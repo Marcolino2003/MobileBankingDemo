@@ -54,48 +54,41 @@ spring.jpa.hibernate.ddl-auto=update
 
 
 git clone https://github.com/Marcolino2003/MobileBankingDemo.git
+```
 cd frontend
-npm install
+npm start
+```
+```
 cd ../backend
 mvn clean install
-
+```
 
 ### 3. Avvio del backend
+```
 cd backend
 mvn spring-boot:run
+```
 Il backend sarà disponibile su http://localhost:8080.
 
 ### 4. Avvio del frontend
-
+```
 cd frontend
 npm start
+```
 Il frontend sarà disponibile su http://localhost:3000.
+Funzionalità principali:
+- Registrazione utente con controllo età (>= 18 anni) e generazione IBAN
+- Login e gestione sessione tramite localStorage
+- Visualizzazione saldo e IBAN utente
+- Effettuazione di bonifici tra utenti con verifica saldo disponibile
+- Visualizzazione lista transazioni con dettagli (data, descrizione, importo)
+- Sicurezza Autenticazione e autorizzazione degli utenti tramite Spring Security
+- Input validati lato backend e frontend
+- Comunicazioni API protette tramite CORS configurato per http://localhost:3000
+- Possibilità di estendere con HTTPS/TLS per cifratura delle comunicazioni
 
-Funzionalità principali
-Registrazione utente con controllo età (>= 18 anni) e generazione IBAN
-
-Login e gestione sessione tramite localStorage
-
-Visualizzazione saldo e IBAN utente
-
-Effettuazione di bonifici tra utenti con verifica saldo disponibile
-
-Visualizzazione lista transazioni con dettagli (data, descrizione, importo)
-
-Sicurezza
-Autenticazione e autorizzazione degli utenti tramite Spring Security
-
-Input validati lato backend e frontend
-
-Comunicazioni API protette tramite CORS configurato per http://localhost:3000
-
-Possibilità di estendere con HTTPS/TLS per cifratura delle comunicazioni
-
-Database
-Tabella utenti (User):
-
-id, nome, cognome, username, password, iban, saldo, paese, dataNascita
+Database Tabella utenti (User):
+`id, nome, cognome, username, password, iban, saldo, paese, dataNascita`
 
 Tabella transazioni (Transaction):
-
-id, amount, date, description, iban, user_id
+`id, amount, date, description, iban, user_id`
