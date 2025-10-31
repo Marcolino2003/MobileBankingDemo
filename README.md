@@ -71,6 +71,7 @@ mvn spring-boot:run
 Il backend sarà disponibile su http://localhost:8080.
 
 ### 4. Avvio del frontend
+ATTENZIONE: PER AVVIO FRONTEND DOVETE FARE git clone https://github.com/Marcolino2003/Frontend e metterlo all'interno della cartella frontend
 ```
 cd frontend
 npm start
