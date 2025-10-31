@@ -52,22 +52,21 @@ spring.jpa.hibernate.ddl-auto=update
 ```
 2. Clonare il progetto
 
-Copia codice
-git clone <link-del-tuo-repo>
+
+git clone https://github.com/Marcolino2003/MobileBankingDemo.git
 cd frontend
 npm install
 cd ../backend
 mvn clean install
+
+
 3. Avvio del backend
-bash
-Copia codice
 cd backend
 mvn spring-boot:run
 Il backend sarà disponibile su http://localhost:8080.
 
 4. Avvio del frontend
-bash
-Copia codice
+
 cd frontend
 npm start
 Il frontend sarà disponibile su http://localhost:3000.
