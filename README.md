@@ -53,11 +53,11 @@ L'applicazione include un componente di inizializzazione chiamato **DataInitiali
 
 Questo meccanismo permette di accedere subito all'app senza dover creare manualmente un account, ed è utile per testare rapidamente:
 
-- login
-- visualizzazione del saldo
-- visualizzazione delle transazioni
-- esecuzione di bonifici
-- verifica delle funzionalità di sicurezza
+- Login
+- Visualizzazione del saldo
+- Visualizzazione delle transazioni
+- Esecuzione di bonifici
+- Verifica delle funzionalità di sicurezza
 
 ---
 
@@ -85,10 +85,10 @@ Il **DataInitializer** crea (solo se non già presente nel database) un utente c
 
 Questo utente permette di:
 
-- accedere subito all'app e verificarne il funzionamento,
-- effettuare bonifici senza dover inserire dati a mano,
-- visualizzare saldi e transazioni di esempio,
-- eseguire test di sicurezza (login, accessi non autorizzati, ecc.).
+- Accedere subito all'app e verificarne il funzionamento,
+- Effettuare bonifici senza dover inserire dati a mano,
+- Visualizzare saldi e transazioni di esempio,
+- Eseguire test di sicurezza (login, accessi non autorizzati, ecc.).
 
 ---
 
