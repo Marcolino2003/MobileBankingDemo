@@ -49,7 +49,60 @@ protezione del canale di comunicazione,
 - Axios
 - React Router DOM
 
+
 ---
+## Seed del Database (DataInitializer)
+
+L’applicazione include un componente di inizializzazione chiamato DataInitializer, utilizzato per popolare automaticamente il database con un utente di prova al primo avvio del backend.
+
+Questo meccanismo permette di accedere subito all’app senza dover creare manualmente un account, ed è utile per testare rapidamente:
+
+-login
+
+-visualizzazione del saldo
+
+-visualizzazione delle transazioni
+
+-esecuzione di bonifici
+
+-verifica delle funzionalità di sicurezza
+
+Utente di prova creato automaticamente
+
+Il DataInitializer crea (solo se non già presente nel database) un utente con:
+
+Username: mariaaa
+
+Password: password123
+
+Nome: Maria Morelli
+
+Paese: IT
+
+IBAN: generato per i test
+
+Saldo iniziale: 50 €
+
+Ruolo: USER
+
+Quando viene eseguito:
+
+-Il seed viene eseguito automaticamente all’avvio del backend grazie al meccanismo di inizializzazione di Spring Boot.
+
+-Utilità per il test
+
+Questo utente permette di:
+
+-accedere subito all’app e verificarne il funzionamento,
+
+-effettuare bonifici senza dover inserire dati a mano,
+
+-visualizzare saldo e transazioni di esempio,
+
+-eseguire test di sicurezza (login, accessi non autorizzati, ecc.).
+---
+
+
 
 ## Installazione
 
@@ -109,54 +162,4 @@ Tabella transazioni (Transaction):
 `id, amount, date, description, iban, user_id`
 
 
----
-## Seed del Database (DataInitializer)
-
-L’applicazione include un componente di inizializzazione chiamato DataInitializer, utilizzato per popolare automaticamente il database con un utente di prova al primo avvio del backend.
-
-Questo meccanismo permette di accedere subito all’app senza dover creare manualmente un account, ed è utile per testare rapidamente:
-
--login
-
--visualizzazione del saldo
-
--visualizzazione delle transazioni
-
--esecuzione di bonifici
-
--verifica delle funzionalità di sicurezza
-
-Utente di prova creato automaticamente
-
-Il DataInitializer crea (solo se non già presente nel database) un utente con:
-
-Username: mariaaa
-
-Password: password123
-
-Nome: Maria Morelli
-
-Paese: IT
-
-IBAN: generato per i test
-
-Saldo iniziale: 50 €
-
-Ruolo: USER
-
-Quando viene eseguito:
-
--Il seed viene eseguito automaticamente all’avvio del backend grazie al meccanismo di inizializzazione di Spring Boot.
-
--Utilità per il test
-
-Questo utente permette di:
-
--accedere subito all’app e verificarne il funzionamento,
-
--effettuare bonifici senza dover inserire dati a mano,
-
--visualizzare saldo e transazioni di esempio,
-
--eseguire test di sicurezza (login, accessi non autorizzati, ecc.).
 
