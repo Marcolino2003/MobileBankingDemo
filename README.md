@@ -110,7 +110,7 @@ Tabella transazioni (Transaction):
 
 
 ---
-## 5. Seed del Database (DataInitializer)
+## Seed del Database (DataInitializer)
 
 L’applicazione include un componente di inizializzazione chiamato DataInitializer, utilizzato per popolare automaticamente il database con un utente di prova al primo avvio del backend.
 
