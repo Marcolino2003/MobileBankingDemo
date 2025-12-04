@@ -13,15 +13,11 @@ Nel sistema, l’utente può registrarsi, autenticarsi, visualizzare il proprio 
 
 Il caso di studio si concentra in particolare sugli aspetti di protezione dei dati sensibili e sulla messa in sicurezza delle comunicazioni tra client e server, affrontando problematiche come:
 
--accesso non autorizzato alle informazioni bancarie,
-
--integrità dei dati durante le transazioni,
-
--protezione del canale di comunicazione,
-
--rischi dovuti a input non validati o attacchi di injection,
-
--necessità di implementare un modello di autenticazione e autorizzazione robusto.
+- accesso non autorizzato alle informazioni bancarie,
+- integrità dei dati durante le transazioni,
+- protezione del canale di comunicazione,
+- rischi dovuti a input non validati o attacchi di injection,
+- necessità di implementare un modello di autenticazione e autorizzazione robusto.
 
 ---
 
