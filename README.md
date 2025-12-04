@@ -17,7 +17,7 @@ Il caso di studio si concentra in particolare sugli aspetti di protezione dei da
 
 -integrità dei dati durante le transazioni,
 
-protezione del canale di comunicazione,
+-protezione del canale di comunicazione,
 
 -rischi dovuti a input non validati o attacchi di injection,
 
