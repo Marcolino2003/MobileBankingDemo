@@ -100,6 +100,8 @@ Questo utente permette di:
 -visualizzare saldo e transazioni di esempio,
 
 -eseguire test di sicurezza (login, accessi non autorizzati, ecc.).
+
+
 ---
 
 
