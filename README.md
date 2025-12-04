@@ -108,7 +108,9 @@ Database Tabella utenti (User):
 Tabella transazioni (Transaction):
 `id, amount, date, description, iban, user_id`
 
-### 5. Seed del Database (DataInitializer)
+
+---
+## 5. Seed del Database (DataInitializer)
 
 L’applicazione include un componente di inizializzazione chiamato DataInitializer, utilizzato per popolare automaticamente il database con un utente di prova al primo avvio del backend.
 
