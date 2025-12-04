@@ -93,3 +93,23 @@ Database Tabella utenti (User):
 
 Tabella transazioni (Transaction):
 `id, amount, date, description, iban, user_id`
+
+### 5. Scenario
+L’applicazione sviluppata simula un sistema di mobile banking progettato per la gestione sicura delle operazioni legate a un conto corrente bancario.
+L’obiettivo è ricreare uno scenario realistico di interazione tra un utente e un servizio bancario moderno, evidenziando le principali sfide di sicurezza che caratterizzano il settore finanziario.
+
+Nel sistema, l’utente può registrarsi, autenticarsi, visualizzare il proprio saldo, consultare lo storico delle transazioni ed effettuare bonifici verso altri conti. Tutte le operazioni vengono eseguite attraverso un’architettura frontend-backend che comunica tramite API REST, simulando il comportamento di una reale piattaforma di mobile banking.
+
+Il caso di studio si concentra in particolare sugli aspetti di protezione dei dati sensibili e sulla messa in sicurezza delle comunicazioni tra client e server, affrontando problematiche come:
+
+-accesso non autorizzato alle informazioni bancarie,
+
+-integrità dei dati durante le transazioni,
+
+protezione del canale di comunicazione,
+
+-rischi dovuti a input non validati o attacchi di injection,
+
+-necessità di implementare un modello di autenticazione e autorizzazione robusto.
+
+
