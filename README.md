@@ -101,18 +101,14 @@ Avvia XAMPP e assicurati che **MySQL** sia attivo. Usa il database `bank` tramit
 ```
 ### 2. Clonare il progetto
 
-
+Andare sulla cartella dove si desidera scaricare il progetto e fare: 
+```
 git clone --recursive https://github.com/Marcolino2003/MobileBankingDemo.git
 ```
-cd frontend
-npm start
-```
-```
-cd ../backend
-mvn clean install
-```
+
 
 ### 3. Avvio del backend
+Da terminale esegui:
 ```
 cd backend
 mvn spring-boot:run
@@ -120,12 +116,16 @@ mvn spring-boot:run
 Il backend sarà disponibile su http://localhost:8080.
 
 ### 4. Avvio del frontend
-
+Da terminale esegui:
 ```
 cd frontend
+cd frontend-bank
 npm start
 ```
+
 Il frontend sarà disponibile su http://localhost:3000.
+
+
 Funzionalità principali:
 - Registrazione utente con controllo età (>= 18 anni) e generazione IBAN
 - Login e gestione sessione tramite localStorage
