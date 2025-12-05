@@ -98,7 +98,7 @@ Questo utente permette di:
 Avvia XAMPP e assicurati che **MySQL** sia attivo. Usa il database `bank` tramite phpMyAdmin o console MySQL:
    ```sql
    USE bank;
-
+```
 ### 2. Clonare il progetto
 
 
