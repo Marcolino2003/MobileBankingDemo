@@ -95,10 +95,10 @@ Questo utente permette di:
 ## Installazione
 
 ### 1. Preparazione del database
-1. Avvia XAMPP e assicurati che **MySQL** sia attivo.
-2.Usa il database `bank` tramite phpMyAdmin o console MySQL:
+1. Avvia XAMPP e assicurati che **MySQL** sia attivo. Usa il database `bank` tramite phpMyAdmin o console MySQL:
    ```sql
    USE bank;
+
 ### 2. Clonare il progetto
 
 
