@@ -92,18 +92,14 @@ Questo utente permette di:
 
 ---
 
-
 ## Installazione
 
 ### 1. Preparazione del database
-1. Avvia XAMPP e assicurati che MySQL sia attivo
-2. Crea il database `bank`
-3. Aggiorna `application.properties` nel backend con le credenziali:
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/bank
-spring.datasource.username=root
-spring.datasource.password=
-spring.jpa.hibernate.ddl-auto=update
+1. Avvia XAMPP e assicurati che **MySQL** sia attivo.  
+2.Usa il database `bank` tramite phpMyAdmin o console MySQL:
+   ```sql
+   USE bank;
+
 
 ```
 ### 2. Clonare il progetto
