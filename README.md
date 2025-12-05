@@ -101,7 +101,7 @@ Questo utente permette di:
    USE bank;
 
 
-```
+
 ### 2. Clonare il progetto
 
 
