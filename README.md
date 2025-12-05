@@ -95,7 +95,7 @@ Questo utente permette di:
 ## Installazione
 
 ### 1. Preparazione del database
-1. Avvia XAMPP e assicurati che **MySQL** sia attivo. Usa il database `bank` tramite phpMyAdmin o console MySQL:
+Avvia XAMPP e assicurati che **MySQL** sia attivo. Usa il database `bank` tramite phpMyAdmin o console MySQL:
    ```sql
    USE bank;
 
