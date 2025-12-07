@@ -143,6 +143,8 @@ Database Tabella utenti (User):
 Tabella transazioni (Transaction):
 `id, amount, date, description, iban, user_id`
 
+---
+
 ### Uso di XAMPP per la Gestione di MySQL
 A causa di problemi di configurazione e compatibilità riscontrati con l'installazione e l'avvio diretto del servizio MySQL standalone, si è deciso di utilizzare XAMPP come ambiente gestito.
 
