@@ -33,13 +33,13 @@ Il caso di studio si concentra in particolare sugli aspetti di protezione dei da
 ## Requisiti
 
 ### Backend
--Java Version: 17
+- Java Version: 17
 
--Spring Boot Version: 3.5.7
+- Spring Boot Version: 3.5.7
 
--Spring Security: Integrato in Spring Boot 3.5.7
+- Spring Security: Integrato in Spring Boot 3.5.7
 
--MySQL: (XAMPP)
+- MySQL: (XAMPP)
 
 -Maven
 ### Frontend
