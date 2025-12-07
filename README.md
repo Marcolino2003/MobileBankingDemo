@@ -288,7 +288,8 @@ nella directory:
 frontend/frontend-bank
 ```
 ## 3 Database — MySQL tramite XAMPP
-XAMPP
+
+### XAMPP
 
 Download:
 Scarica XAMPP dal sito ufficiale Apache Friends.
@@ -298,7 +299,7 @@ Durante l’installazione, assicurati che il modulo MySQL sia selezionato.
 
 Avvio:
 Apri il Pannello di Controllo XAMPP → premi Start su:
-
+```
 MySQL
-
+```
 Il backend Spring Boot si collegherà automaticamente a questo servizio.
