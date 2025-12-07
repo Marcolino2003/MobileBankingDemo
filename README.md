@@ -189,7 +189,7 @@ Frontend disponibile su:
 ---
 
 ## Struttura del Database
-### Tabella user:
+### Tabella users:
 - Campo	Descrizione
 - id	Identificativo
 - nome	Nome utente
@@ -209,3 +209,96 @@ Frontend disponibile su:
 - description	Descrizione
 - iban	IBAN destinazione
 - user_id	Riferimento utente
+
+##  Istruzioni di Download e Setup — Requisiti
+
+Per avviare l'applicazione sono necessari i seguenti ambienti di runtime e gestori di pacchetti.
+
+---
+
+## 1️ Java e Spring Boot (Backend)
+
+Il progetto utilizza **Java 17** e **Maven** per la gestione delle dipendenze di Spring Boot.
+
+### ☕ Java Development Kit (JDK 17)
+
+**Download:**  
+Scarica e installa Java 17 (o versione successiva) da uno dei seguenti provider:
+
+- Oracle JDK  
+- Eclipse Temurin  
+- Amazon Corretto  
+- Adoptium  
+
+**Verifica installazione:**  
+Apri il terminale e digita:
+
+```
+java -version
+```
+Maven
+
+Maven è il gestore di dipendenze del backend.
+
+Molti IDE (come IntelliJ IDEA o Eclipse) includono già Maven.
+
+In caso contrario, installalo dal sito ufficiale.
+
+Verifica installazione:
+
+mvn -version
+
+
+Se il comando non viene riconosciuto, assicurati di configurare la variabile d’ambiente PATH seguendo le istruzioni di installazione ufficiali.
+
+## 2️ Node.js e Dipendenze Frontend (React / Axios)
+
+Il frontend React richiede Node.js, che include automaticamente npm (Node Package Manager).
+
+- Node.js (v18+)
+
+Download:
+Scarica e installa l’ultima versione LTS di Node.js dal sito ufficiale.
+
+Verifica installazione:
+```
+node -v
+npm -v
+```
+
+Librerie Frontend (React, Axios, React Router DOM)
+
+Le librerie necessarie:
+
+- React.js 19.2.0
+
+- Axios 1.13.1
+
+- React Router DOM 7.9.5
+
+Non richiedono download manuale.
+
+Verranno installate automaticamente quando esegui:
+```
+npm install
+```
+
+nella directory:
+```
+frontend/frontend-bank
+```
+## 3 Database — MySQL tramite XAMPP
+XAMPP
+
+Download:
+Scarica XAMPP dal sito ufficiale Apache Friends.
+
+Installazione:
+Durante l’installazione, assicurati che il modulo MySQL sia selezionato.
+
+Avvio:
+Apri il Pannello di Controllo XAMPP → premi Start su:
+
+MySQL
+
+Il backend Spring Boot si collegherà automaticamente a questo servizio.
