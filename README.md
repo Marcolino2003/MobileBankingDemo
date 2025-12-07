@@ -33,18 +33,23 @@ Il caso di studio si concentra in particolare sugli aspetti di protezione dei da
 ## Requisiti
 
 ### Backend
-- Java 17+
-- Spring Boot 3.x
-- Spring Security
-- MySQL (XAMPP)
-- Maven
+-Java Version: 17
 
+-Spring Boot Version: 3.5.7
+
+-Spring Security: Integrato in Spring Boot 3.5.7
+
+-MySQL: (XAMPP)
+
+-Maven
 ### Frontend
-- Node.js 18+
-- React.js 18+
-- Axios
-- React Router DOM
+- Node.js: 18+ (Richiesto per la compatibilità con React 19)
 
+- React.js: ^19.2.0
+
+- Axios: (Versione da progetto)
+
+- React Router DOM: (Versione da progetto)
 
 ---
 ## Seed del Database (DataInitializer)
