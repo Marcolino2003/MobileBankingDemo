@@ -41,11 +41,11 @@ Il caso di studio si concentra in particolare sugli aspetti di protezione dei da
 
 - MySQL: (XAMPP)
 
--Maven
+- Maven
 ### Frontend
 - Node.js: 18+ (Richiesto per la compatibilità con React 19)
 
-- React.js: ^19.2.0
+- React.js: 19.2.0
 
 - Axios: (Versione da progetto)
 
