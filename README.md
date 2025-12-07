@@ -245,9 +245,9 @@ Molti IDE (come IntelliJ IDEA o Eclipse) includono già Maven.
 In caso contrario, installalo dal sito ufficiale.
 
 Verifica installazione:
-
+```
 mvn -version
-
+```
 
 Se il comando non viene riconosciuto, assicurati di configurare la variabile d’ambiente PATH seguendo le istruzioni di installazione ufficiali.
 
