@@ -220,7 +220,7 @@ Per avviare l'applicazione sono necessari i seguenti ambienti di runtime e gesto
 
 Il progetto utilizza **Java 17** e **Maven** per la gestione delle dipendenze di Spring Boot.
 
-### ☕ Java Development Kit (JDK 17)
+###  Java Development Kit (JDK 17)
 
 **Download:**  
 Scarica e installa Java 17 (o versione successiva) da uno dei seguenti provider:
@@ -236,7 +236,7 @@ Apri il terminale e digita:
 ```
 java -version
 ```
-Maven
+### Maven
 
 Maven è il gestore di dipendenze del backend.
 
@@ -266,7 +266,7 @@ node -v
 npm -v
 ```
 
-Librerie Frontend (React, Axios, React Router DOM)
+### Librerie Frontend (React, Axios, React Router DOM)
 
 Le librerie necessarie:
 
