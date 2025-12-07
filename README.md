@@ -1,159 +1,209 @@
-# Mobile Banking Demo - Caso di Studio
+#  Mobile Banking Demo – Caso di Studio
 
 **Autore:** Marco Morelli  
-**Matricola:** 837680
+**Matricola:** 837680  
 
 ---
 
-## Scenario
-L’applicazione sviluppata simula un sistema di mobile banking progettato per la gestione sicura delle operazioni legate a un conto corrente bancario.
-L’obiettivo è ricreare uno scenario realistico di interazione tra un utente e un servizio bancario moderno, evidenziando le principali sfide di sicurezza che caratterizzano il settore finanziario.
+##  Scenario
 
-Nel sistema, l’utente può registrarsi, autenticarsi, visualizzare il proprio saldo, consultare lo storico delle transazioni ed effettuare bonifici verso altri conti. Tutte le operazioni vengono eseguite attraverso un’architettura frontend-backend che comunica tramite API REST, simulando il comportamento di una reale piattaforma di mobile banking.
+L’applicazione simula un sistema di mobile banking moderno, progettato per gestire in modo sicuro le operazioni relative a un conto corrente bancario.
 
-Il caso di studio si concentra in particolare sugli aspetti di protezione dei dati sensibili e sulla messa in sicurezza delle comunicazioni tra client e server, affrontando problematiche come:
+L’utente può:
 
-- accesso non autorizzato alle informazioni bancarie,
-- integrità dei dati durante le transazioni,
-- protezione del canale di comunicazione,
-- rischi dovuti a input non validati o attacchi di injection,
-- necessità di implementare un modello di autenticazione e autorizzazione robusto.
+- Registrarsi  
+- Autenticarsi  
+- Visualizzare saldo e IBAN  
+- Consultare lo storico delle transazioni  
+- Effettuare bonifici verso altri conti  
 
----
-
-## Architettura
-
-- **Frontend:** React.js
-- **Backend:** Spring Boot con Spring Data JPA
-- **Database:** MySQL (`bank`) tramite XAMPP
-- **Comunicazione:** API REST tramite Axios
+Il sistema è basato su un’architettura **frontend–backend** che comunica tramite **API REST**, replicando il comportamento di una piattaforma reale.
 
 ---
 
-## Requisiti
+##  Obiettivi di Sicurezza
 
-### Backend
-- Java Version: 17
+Il caso di studio evidenzia le principali sfide del settore bancario:
 
-- Spring Boot Version: 3.5.7
-
-- Spring Security: Integrato in Spring Boot 3.5.7
-
-- MySQL: (XAMPP)
-
-- Maven
-### Frontend
-- Node.js: 18+ (Richiesto per la compatibilità con React 19)
-
-- React.js: 19.2.0
-
-- Axios: 1.13.1
-
-- React Router DOM: 7.9.5
-
----
-## Seed del Database (DataInitializer)
-
-L'applicazione include un componente di inizializzazione chiamato **DataInitializer**, utilizzato per popolare automaticamente il database con un utente di prova al primo avvio del backend.
-
-Questo meccanismo permette di accedere subito all'app senza dover creare manualmente un account, ed è utile per testare rapidamente:
-
-- Login
-- Visualizzazione del saldo
-- Visualizzazione delle transazioni
-- Esecuzione di bonifici
-- Verifica delle funzionalità di sicurezza
+- Prevenzione dell’accesso non autorizzato  
+- Garantire l’integrità dei dati nelle transazioni  
+- Proteggere la comunicazione tra client e server  
+- Mitigare rischi da input non validati o attacchi injection  
+- Applicare un modello solido di autenticazione e autorizzazione  
 
 ---
 
-## Utente di prova creato automaticamente
+##  Architettura Tecnica
 
-Il **DataInitializer** crea (solo se non già presente nel database) un utente con:
+### **Frontend**
+- React.js  
+- Axios  
+- React Router DOM  
 
-- **Nome utente:** `mariaaa`
-- **Password:** `password123`
-- **Nome:** Maria Morelli
-- **Paese:** IT
-- **IBAN:** generato automaticamente per i test
-- **Saldo iniziale:** 50 €
-- **Ruolo:** `UTENTE`
+### **Backend**
+- Spring Boot (3.5.7)  
+- Spring Data JPA  
+- Spring Security  
+- Java 17  
+- Maven  
 
----
+### **Database**
+- MySQL tramite XAMPP  
+- **Schema:** `bank`
 
-## Quando viene eseguito
-
-- Il seed viene eseguito automaticamente all'avvio del backend grazie al meccanismo di inizializzazione di Spring Boot.
-
----
-
-## Utilità per il test
-
-Questo utente permette di:
-
-- Accedere subito all'app e verificarne il funzionamento,
-- Effettuare bonifici senza dover inserire dati a mano,
-- Visualizzare saldi e transazioni di esempio,
-- Eseguire test di sicurezza (login, accessi non autorizzati, ecc.).
+### **Comunicazione**
+- API REST  
+- Axios lato frontend  
 
 ---
 
-## Installazione
+##  Requisiti Software (Versioni Precise)
 
-### 1. Preparazione del database
-Avvia XAMPP e assicurati che **MySQL** sia attivo. Usa il database `bank` tramite phpMyAdmin o console MySQL:
-   ```sql
-   USE bank;
+### **Backend**
+- Java: **17**  
+- Spring Boot: **3.5.7**  
+- Spring Security: integrato  
+- MySQL: via XAMPP  
+- Maven  
+
+### **Frontend**
+- Node.js: **18+**  
+- React.js: **^9.2.0**  
+- Axios: **1.13.1**  
+- React Router DOM: **7.9.5**  
+
+---
+
+##  Note e Risoluzione Problemi MySQL
+
+###  Uso di XAMPP
+Per evitare problemi di compatibilità con MySQL installato standalone, si utilizza **XAMPP**, che garantisce:
+
+- Maggiore stabilità  
+- Avvio affidabile del servizio MySQL  
+
+### Verifiche fondamentali
+
+Assicurarsi che:
+
+1. MySQL sia attivo in XAMPP  
+   - Porta predefinita: **3306**
+
+2. Dialetto Hibernate corretto  
+spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+
+
+3. Timezone impostato nella URL JDBC  
+spring.datasource.url=jdbc:mysql://localhost:3306/bank?serverTimezone=Europe/Rome
+
+
+
+Queste impostazioni permettono il corretto funzionamento del **DataInitializer**.
+
+---
+
+##  Seed del Database (DataInitializer)
+
+Il backend contiene un componente **DataInitializer** che crea automaticamente un utente di test al primo avvio, se non esistente.
+
+###  Utente creato automaticamente
+
+- **Username:** `mariaaa`  
+- **Password:** `password123`  
+- **Nome:** Maria Morelli  
+- **Paese:** IT  
+- **IBAN:** generato automaticamente  
+- **Saldo iniziale:** 50 €  
+- **Ruolo:** `UTENTE`  
+
+###  A cosa serve?
+
+Permette di testare subito:
+
+- Login  
+- Saldo e transazioni  
+- Bonifici  
+- Funzionalità di sicurezza  
+
+---
+
+##  Installazione e Setup
+
+### 1️ Preparazione del Database
+
+Avvia **XAMPP → MySQL → phpMyAdmin**
+
+Assicurati che esista il database `bank`:
+
+```sql
+USE bank;
 ```
-### 2. Clonare il progetto
-
-Andare sulla cartella dove si desidera scaricare il progetto e fare: 
+### 2️ Clonare il progetto
 ```
 git clone --recursive https://github.com/Marcolino2003/MobileBankingDemo.git
 ```
-
-
-### 3. Avvio del backend
-Da terminale esegui:
+### 3️ Avvio Backend
 ```
 cd backend
 mvn spring-boot:run
 ```
-Il backend sarà disponibile su http://localhost:8080.
+Backend disponibile su:
+http://localhost:8080
 
-### 4. Avvio del frontend
-Da terminale esegui:
+### 4️ Avvio Frontend
 ```
-cd frontend
-cd frontend-bank
+cd frontend/frontend-bank
+npm install
 npm start
 ```
-
-Il frontend sarà disponibile su http://localhost:3000.
-
-
-Funzionalità principali:
-- Registrazione utente con controllo età (>= 18 anni) e generazione IBAN
-- Login e gestione sessione tramite localStorage
-- Visualizzazione saldo e IBAN utente
-- Effettuazione di bonifici tra utenti con verifica saldo disponibile
-- Visualizzazione lista transazioni con dettagli (data, descrizione, importo)
-- Sicurezza Autenticazione e autorizzazione degli utenti tramite Spring Security
-- Input validati lato backend e frontend
-- Comunicazioni API protette tramite CORS configurato per http://localhost:3000
-- Possibilità di estendere con HTTPS/TLS per cifratura delle comunicazioni
-
-Database Tabella utenti (User):
-`id, nome, cognome, username, password, iban, saldo, paese, dataNascita`
-
-Tabella transazioni (Transaction):
-`id, amount, date, description, iban, user_id`
-
+Frontend disponibile su:
+ http://localhost:3000
 ---
 
-### Uso di XAMPP per la Gestione di MySQL
-A causa di problemi di configurazione e compatibilità riscontrati con l'installazione e l'avvio diretto del servizio MySQL standalone, si è deciso di utilizzare XAMPP come ambiente gestito.
+## Funzionalità Principali
+- Registrazione utente (età minima 18 anni)
 
-XAMPP fornisce una soluzione pacchettizzata che semplifica l'avvio e la gestione del server MySQL, garantendo una maggiore stabilità e affidabilità durante l'esecuzione del backend di Spring Boot.
+- Generazione automatica IBAN
 
+- Login 
 
+- Visualizzazione saldo e IBAN
 
+- Effettuazione bonifici con verifica saldo
+
+- Lista transazioni con data, descrizione e importo
+---
+
+## Sicurezza Implementata
+- Autenticazione e autorizzazione con Spring Security
+
+- Validazione input lato backend e frontend
+
+- CORS configurato per http://localhost:3000
+
+- Architettura predisposta per HTTPS/TLS
+
+- Password cifrate con BCrypt
+---
+
+## Struttura del Database
+### Tabella user:
+- Campo	Descrizione
+- id	Identificativo
+- nome	Nome utente
+- cognome	Cognome
+- username	Username
+- password	Password hash
+- iban	Codice IBAN
+- saldo	Saldo attuale
+- paese	Paese
+- dataNascita	Data di nascita
+
+## Tabella transaction
+- Campo	Descrizione
+- id	Identificativo
+- amount	Importo
+- date	Data transazione
+- description	Descrizione
+- iban	IBAN destinazione
+- user_id	Riferimento utente
