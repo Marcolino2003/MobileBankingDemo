@@ -68,7 +68,7 @@ Il caso di studio evidenzia le principali sfide del settore bancario:
 
 ### **Frontend**
 - Node.js: **18+**  
-- React.js: **^9.2.0**  
+- React.js: **9.2.0**  
 - Axios: **1.13.1**  
 - React Router DOM: **7.9.5**  
 
@@ -156,8 +156,10 @@ cd frontend/frontend-bank
 npm install
 npm start
 ```
+
 Frontend disponibile su:
  http://localhost:3000
+
 ---
 
 ## Funzionalità Principali
