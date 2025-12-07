@@ -47,9 +47,9 @@ Il caso di studio si concentra in particolare sugli aspetti di protezione dei da
 
 - React.js: 19.2.0
 
-- Axios: (Versione da progetto)
+- Axios: 1.13.1
 
-- React Router DOM: (Versione da progetto)
+- React Router DOM: 7.9.5
 
 ---
 ## Seed del Database (DataInitializer)
