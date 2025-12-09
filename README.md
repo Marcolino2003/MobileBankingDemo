@@ -301,5 +301,16 @@ Avvio:
 Apri il Pannello di Controllo XAMPP → premi Start su:
 ```
 MySQL
+
+https://github.com/user-attachments/assets/b14336b4-e5af-43a5-aedf-157370018655
+
+
 ```
 Il backend Spring Boot si collegherà automaticamente a questo servizio.
+
+## DIMOSTRAZIONE DEL PROGETTO 
+
+
+https://github.com/user-attachments/assets/1631c703-7b7c-4fd4-8954-0c3887770b48
+
+
