@@ -89,11 +89,9 @@ Assicurarsi che:
 1. MySQL sia attivo in XAMPP  
    - Porta predefinita: **3306**
 
-2. Dialetto Hibernate corretto  
-spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
 
 
-3. Timezone impostato nella URL JDBC  
+2. Timezone impostato nella URL JDBC  
 spring.datasource.url=jdbc:mysql://localhost:3306/bank?serverTimezone=Europe/Rome
 
 
@@ -223,12 +221,10 @@ Il progetto utilizza **Java 17** e **Maven** per la gestione delle dipendenze di
 ###  Java Development Kit (JDK 17)
 
 **Download:**  
-Scarica e installa Java 17 (o versione successiva) da uno dei seguenti provider:
+Scarica e installa Java 17 (o versione successiva) dal seguente  provider:
 
 - Oracle JDK  
-- Eclipse Temurin  
-- Amazon Corretto  
-- Adoptium  
+
 
 **Verifica installazione:**  
 Apri il terminale e digita:
@@ -318,5 +314,52 @@ https://github.com/user-attachments/assets/1631c703-7b7c-4fd4-8954-0c3887770b48
 Questo diagramma mostra come il Frontend (Client) interagisce con specifici endpoint del Backend (Server), che a sua volta comunica con il Database.
 
 <img width="797" height="302" alt="Diagramma Architetturale con Endpoint (Stile API) drawio (1)" src="https://github.com/user-attachments/assets/b4378695-6ac4-467b-97f3-6d3e0f621d2f" />
+
+## 6 SCHERMATE DEL PROGETTO
+
+### REGISTRAZIONE
+
+<img width="1912" height="1007" alt="REGISTRAZIONE" src="https://github.com/user-attachments/assets/f091f9c8-b0ef-4d09-b532-0552deb21406" />
+
+### REGISTRAZIONE FALLITA
+
+<img width="1911" height="1002" alt="Registrazione_Fallita" src="https://github.com/user-attachments/assets/594600c0-746c-437d-b342-91de46dada25" />
+
+### LOGIN
+
+<img width="1917" height="1007" alt="login" src="https://github.com/user-attachments/assets/97f4e374-09b1-4d96-ab29-cff360fff578" />
+
+### LOGIN FALLITO
+
+<img width="1918" height="951" alt="CREDENZIALI_NON_VALIDE" src="https://github.com/user-attachments/assets/67f19f08-8650-4a2e-8914-f0ce560af468" />
+
+
+### HOMEPAGE UTENTE NORMALE
+
+<img width="1903" height="1017" alt="HOMEPAGE_USERNORMALE" src="https://github.com/user-attachments/assets/3b312318-110b-495b-b492-96960a97da5f" />
+
+### HOMEPAGE UTENTE TESTER
+
+<img width="1917" height="1016" alt="HOMEPAGE_USERTESTER" src="https://github.com/user-attachments/assets/0a24ac2b-8b06-4036-aa59-e212d225e123" />
+
+### ERRORE BONIFICO
+
+<img width="1917" height="1017" alt="ERRORE_BONIFICO" src="https://github.com/user-attachments/assets/13cdcceb-6417-4024-b280-35eb875afb90" />
+
+### ERRORE SALDO INSUFFICIENTE 
+
+<img width="1915" height="1011" alt="SALDO_INSUFFICENTE" src="https://github.com/user-attachments/assets/0c15650e-531c-4e9f-a662-7eff8ce0e63e" />
+
+### BONIFICO EFFETTUATO CON SUCCESSO
+
+<img width="1917" height="1012" alt="SUCCESSO_BONIFICO" src="https://github.com/user-attachments/assets/f99ce7f6-d582-46d0-bfe0-ccf46d8952a8" />
+
+### HOMEPAGE DOPO AVER FATTO BONIFICO UTENTE TEST
+
+<img width="1917" height="1005" alt="HOME_DOPOBONIFICO_UTENTETEST" src="https://github.com/user-attachments/assets/c179f229-96b8-4ef8-9400-1a6e4671d2dc" />
+
+### HOMEPAGE DOPO AVER RICEVUTO BONIFICO
+
+<img width="1918" height="1016" alt="HOMEPAGE_DOPO_BONIFICO_DI_UTENTE_NORMALE" src="https://github.com/user-attachments/assets/3f60245c-5a9b-4050-94f1-f08afe417742" />
 
 
