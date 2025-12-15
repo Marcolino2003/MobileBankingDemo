@@ -37,7 +37,7 @@ Nel progetto, la **View è completamente gestita dal client**.
   - Solo logica di **visualizzazione** e gestione eventi UI  
 
 **Nel codice:**
-- Componenti React (`Dashboard.jsx`, `Login.jsx`, ecc.)
+- Componenti React 
 - Ricevono dati JSON dal backend
 - Renderizzano HTML/CSS dinamicamente
 
