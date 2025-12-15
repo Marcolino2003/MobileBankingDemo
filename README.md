@@ -188,16 +188,17 @@ Frontend disponibile su:
 
 ## Struttura del Database
 ### Tabella users:
-- Campo	Descrizione
-- id	Identificativo
-- nome	Nome utente
-- cognome	Cognome
-- username	Username
-- password	Password hash
-- iban	Codice IBAN
-- saldo	Saldo attuale
-- paese	Paese
-- dataNascita	Data di nascita
+| Campo        | Descrizione     |
+|--------------|-----------------|
+| id           | Identificativo  |
+| nome         | Nome utente     |
+| cognome      | Cognome         |
+| username     | Username        |
+| password     | Password hash   |
+| iban         | Codice IBAN     |
+| saldo        | Saldo attuale   |
+| paese        | Paese           |
+| dataNascita  | Data di nascita |
 
 ## Tabella transaction
 - Campo	Descrizione
