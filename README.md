@@ -20,6 +20,121 @@ L’utente può:
 Il sistema è basato su un’architettura **frontend–backend** che comunica tramite **API REST**, replicando il comportamento di una piattaforma reale.
 
 ---
+# Architettura MVC del Progetto Bancario
+
+## V - VIEW (La Vista / Frontend)
+
+È la parte che l'utente **vede** e con cui **interagisce**.  
+Nel progetto, la **View è completamente gestita dal client**.
+
+- **Tecnologie:** React.js, React Router DOM  
+- **Ruolo:**  
+  - Mostra il saldo  
+  - Visualizza il form di login  
+  - Elenca le transazioni  
+- **Responsabilità:**  
+  - Nessuna logica di business bancaria  
+  - Solo logica di **visualizzazione** e gestione eventi UI  
+
+**Nel codice:**
+- Componenti React (`Dashboard.jsx`, `Login.jsx`, ecc.)
+- Ricevono dati JSON dal backend
+- Renderizzano HTML/CSS dinamicamente
+
+---
+
+## C - CONTROLLER (Il Gestore / Backend)
+
+È il **cervello** dell’applicazione: riceve le richieste e decide cosa fare.
+
+- **Tecnologie:** Spring Boot (`@RestController`), Spring Security  
+- **Ruolo:**  
+  - Riceve richieste HTTP dal frontend (Axios)  
+  - Gestisce l’autenticazione (JWT / Session)  
+  - Valida gli input (es. *età > 18*)  
+  - Decide quale servizio invocare  
+
+**Nel codice:**
+- Classi Java annotate con `@RestController`
+- Endpoint REST (es. `POST /api/bonifico`)
+
+---
+
+## M - MODEL (Il Modello / Dati)
+
+Rappresenta la **struttura dei dati** e le **regole di business fondamentali**.
+
+- **Tecnologie:** Spring Data JPA, MySQL (XAMPP)  
+- **Ruolo:**  
+  - Gestisce lo stato dell’applicazione  
+  - Mantiene saldo, utenti e storico transazioni  
+
+**Nel codice:**
+- **Entities Java:**
+  - `User` (id, nome, saldo, iban)
+  - `Transaction`
+- **Database MySQL:**
+  - Tabelle `users`
+  - Tabelle `transaction`
+
+---
+
+## 3. Esempio Pratico: Flusso di un Bonifico
+
+### 1️ View (Frontend)
+L’utente **Maria Morelli** compila il form del bonifico e preme **"Invia"**.  
+React intercetta l’evento.
+
+### 2️ Axios
+Viene inviata una richiesta:
+```http
+POST /api/bonifico
+con payload JSON:
+
+{
+  "importo": 100,
+  "ibanDestinatario": "IT60X0542811101000000123456"
+}
+```
+### 3️ Controller (Backend)
+
+Spring Boot riceve la richiesta tramite TransactionController:
+
+Verifica autenticazione
+
+Valida i dati
+
+Passa la richiesta al service
+
+### 4️ Model / Business Logic
+
+Controlla se il saldo di Maria è sufficiente
+
+Se sì:
+
+Aggiorna la tabella users
+
+Sottrae l’importo a Maria
+
+Aggiunge l’importo al destinatario
+
+Inserisce una nuova riga in transaction
+
+### 5️ Ritorno della Risposta
+
+Il backend risponde con:
+
+200 OK
+
+### 6️ Aggiornamento della View
+
+Axios riceve la risposta positiva
+React aggiorna il saldo mostrato senza ricaricare la pagina
+
+
+
+<img width="732" height="1011" alt="MVC PROGETTO SAOS drawio" src="https://github.com/user-attachments/assets/3b78774b-a506-41e4-b057-42bfcb78f6f1" />
+
 
 ##  Obiettivi di Sicurezza
 
