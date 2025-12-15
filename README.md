@@ -201,13 +201,15 @@ Frontend disponibile su:
 | dataNascita  | Data di nascita |
 
 ## Tabella transaction
-- Campo	Descrizione
-- id	Identificativo
-- amount	Importo
-- date	Data transazione
-- description	Descrizione
-- iban	IBAN destinazione
-- user_id	Riferimento utente
+| Campo       | Descrizione            |
+|-------------|------------------------|
+| id          | Identificativo         |
+| amount      | Importo                |
+| date        | Data transazione       |
+| description | Descrizione            |
+| iban        | IBAN destinazione      |
+| user_id     | Riferimento utente     |
+
 
 ##  Istruzioni di Download e Setup — Requisiti
 
