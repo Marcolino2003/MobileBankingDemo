@@ -32,14 +32,12 @@ Nel progetto, la **View è completamente gestita dal client**.
   - Mostra il saldo  
   - Visualizza il form di login  
   - Elenca le transazioni  
-- **Responsabilità:**  
-  - Nessuna logica di business bancaria  
-  - Solo logica di **visualizzazione** e gestione eventi UI  
+
 
 **Nel codice:**
 - Componenti React 
 - Ricevono dati JSON dal backend
-- Renderizzano HTML/CSS dinamicamente
+
 
 ---
 
@@ -78,8 +76,19 @@ Rappresenta la **struttura dei dati** e le **regole di business fondamentali**.
   - Tabelle `transaction`
 
 ---
+## MOTIVAZIONE DELLA SCELTA DI QUESTO TIPO DI ARCHITETTURA
 
-## 3. Esempio Pratico: Flusso di un Bonifico
+- Ho scelto di separare nettamente il Frontend (React) dal Backend (Spring Boot) per tre motivi fondamentali:
+
+- Migliore User Experience (La View): Utilizzando React, l'applicazione è una Single Page Application (SPA). Come descritto nel punto "View", l'utente interagisce senza dover ricaricare l'intera pagina a ogni click. Se avessi usato un MVC classico (JSP), ogni azione avrebbe comportato un ricaricamento pagina, rendendo l'esperienza lenta e "vecchia".
+
+- Riusabilità del Backend (Il Controller): Il mio Controller espone API REST che restituiscono JSON, non HTML. Questo è fondamentale perché rende il backend "universale": lo stesso identico codice Java potrebbe servire domani un'app mobile (Android/iOS) senza dover essere modificato. Un'architettura monolitica non avrebbe permesso questa flessibilità.
+
+- Sicurezza e Pulizia (Il Model): Tenendo la logica di business (calcolo saldo, regole bonifico) strettamente nel Backend e nel Database (Model), garantisco che nessun dato sensibile venga manipolato dal browser. Il Frontend riceve solo il risultato finale, garantendo che le regole di sicurezza ("Business Logic") siano inaccessibili all'utente finale.
+
+---
+
+## Esempio Pratico: Flusso di un Bonifico
 
 ### 1️ View (Frontend)
 L’utente **Maria Morelli** compila il form del bonifico e preme **"Invia"**.  
@@ -89,7 +98,7 @@ React intercetta l’evento.
 Viene inviata una richiesta:
 ```http
 POST /api/bonifico
-con payload JSON:
+
 
 {
   "importo": 100,
